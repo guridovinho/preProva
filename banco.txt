@@ -1,0 +1,28 @@
+Entrar no phpmyadmin
+
+http://127.0.0.1/phpmyadmin
+
+PS: O APACHE E O MYSQL TEM QUE ESTAR RODANDO NO XAMPP
+
+Do lado esquerdo vai em new/novo pra criar um novo database
+
+Nome do DB: prova
+
+Criar/create
+
+Ai clique em SQL e cole o código do DB que nem no enunciado, no caso da pré prova é: 
+
+CREATE TABLE Contatos (
+  Id INTEGER NOT NULL AUTO_INCREMENT,
+  Nome VARCHAR(50),
+  Endereco VARCHAR(50),
+  Email VARCHAR(50),
+  Data_Nascimento DATETIME,
+  PRIMARY KEY (`ID`)
+)
+
+e executar
+
+Pronto, foi criada uma tabela chamada contatos
+
+Pra ficar bonitinho o teu codigo vamos criar uma função num arquivo separado chamado db.php

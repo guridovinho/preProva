@@ -1,0 +1,123 @@
+<!--agora sobre EDITAR
+Esse aqui é barbarda
+    Dewes, Everton- 2018
+
+    Essa pagina é um mistura da questao 3 e 1
+    
+
+Pegamos o
+Fazemos um
+//Veja que é contato e não contatoS pq só peguei 1 cara do bd
+// ATENCAO AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+// COMO SÓ PEGAMOS 1(ONE) LINHA SE USAR fetch() e não fetchAll()
+SE LEMBRE QUE AS VARIVEIS TEM MAIUSCULO E MINUSCULO
+O QUE DA PRA FAZER É 
+PRA NAO CAGAR TUDO
+ Jogo dos 2 erro: qual a diferenca desse formulario pro do um.php? 
+    A resposta esta no final do codigo
+t
+, só vai mudar o query la embaixo
+ maroto top
+ //PRBNS APROVADO
+Resposta:
+O action mudou de um.php para editar.php?id=
+
+E foi 
+dicionado um atributo chamado value, o que ele faz é que o formulario ja vem com esse valor
+então caso voce não mexa nele esse value é o que vai ser enviado via POST
+Tradução: se tu não muda o campo ele fica o mesmo no DB--> 
+___________________________________________________________________
+<!--agora sobre o DELETAR:
+ Veja que a url tem uma formado dEferente
+        o que vem depois do ? são variaveis que pode ser capturadas usando GET
+
+        Pra pegar o id=1 é só fazer $id = $_GET['id'];
+        Tem como por mais variaveis assim;
+
+        site.com/pagina.php?id=1&nome=Rafael
+
+        Na tabela da pagina dois_e_tres eu gerei os links usando a estrutura basica
+        localhost/deletar.php?id=X
+        esse X é nada mais nada menos que o ID que tirei do banco de dados, os ids foram "printados" 
+Vamos fazer o query, para deletar usamos DELETE FROM tabela WHERE condicao
+   Lembrando que o :id é o tal do placeholder, é tipo por um cone para marcar uma vaga de estacionamento
+        Tiramos o cone e botamos o carro
+  precisamos testar se deu certo essa bagaça, para isso vamos contar quantas linhas foram deletadas
+
+         Saimos do PHP pra facilitar
+        Se o numero de linhas deletadas for 0 é pq deu brete
+        Mas deu brete "controlado"  não é um erro nem exception 
+        PRESTE ATENCAO COMO FOI FEITO O IF E ELSE EM PHP NO MEIO DO HTML
+        TEM QUE ABRIR E FECHAR A TAG PHP NA MESMA LINHA
+        NÃO TEM CHAVES {} E VAI DOIS PONTOS DEPOIS DO IF E ELSE
+        ALEM DO ENDIF LA EMBAIXCO
+        -->
+        _________________________________________________________
+
+<!-- QUESTÃO DOIS
+	vamos catar/exibir os dados. 
+Primeiro passo conectar ao db
+AQUI EU PRECISO LEMBRAR DO REQUIRE! 
+Ai vem o menino query, mas dessa vez é um SELECT
+SELECT colunas FROM tabela
+Como queremos todos os dados vai um * no colunas
+Caso queira algo mais especifico se usa
+
+SELECT colunas FROM tabela WHERE condição 
+Pode ser
+SELECT colunas FROM tabela WHERE email = :email
+e depois 
+
+$stmt->bindParam(':email', $email);
+
+Ai enviamos esses dados COMO OBJETOS pra uma variavel
+Para pegar os dados da variavel $contatos vamos usar uma tabela e um for each
+primeiro vamos fazer o cabecalho da tabela usando as tags tr e th
+tr É TABLE ROW
+O QUE É ROW?
+É UMA LINHA VERTICAL
+TBM CONHECIDA COMO 
+FILEIRA
+QUE VAI DA ESQUERDA
+PARA ONDE?
+PARA A DIREITA 
+
+DEUS, EU NÃO SOU DE PEDIR QUASE NADA, MAS,POR FAVOR, ABENÇOE ESSE QUERIDAO: RAFAEL CATELAN DO NASCIMENTO, PQ ELE É UM CARA 10...
+E PALAVRAS SÃO INSUFICIENTES PARA AGRADECER ESSA   GENTILEZA!
+DESDE QUE CONHECI, ADMIRO ESSE BROTHER E NÃO ESCONDO ISSO, PELO CONTRÁRIO, FAÇO QUESTÃO DE DEIXAR ISSO BEM CLARO, PRA ELE E PRA TODOS!
+DEPOIS DE UM TEMPO O QUE SINTO É UM TREMENDO ORGULHO DE O CONHECER E TER ENTRE OS QUE TENHO CONTATO!
+JÁ NÃO É DE HOJE, QUE ALÉM DE ADMIRAÇÃO E ORGULHO NUTRO UMA IMENSA GRATIDÃO POR ESTE IRMÃOZINHO! VALEU, CARA, VALEU, MANO!!!
+
+
+O th é table header, o "titulo" aue vai na coluna
+vamos por 1 center pra ficar melhor e um por contorno na tabela com o border
+
+
+ATENÇÃO
+        Esse bloco entre os dois php foreach É EM HTML então não vai echo nem porra nenhuma
+        Para acessarmos um atributo dos objetos usamos a setinha -> ex: $contato->nome
+        Vamos criar um TABLE ROW (tr) para cada conjunto de dados, no caso CONTATO, poderia ser CLIENTE
+        contendo os DADOS
+
+        td é table data
+
+        Ai vem um pobrema, como eu imprimo php no HTML?
+        Da pra usar < ?php echo "$contato->nome"; ? > 
+        As tags sem espaço no caso, mas fica muito comprido e uma bosta
+        Para isso existe uma notação mais curta que usei abaixo 
+
+        !!!!!!!!!!!!WARNING!!!!!!!!!!!!!!!!!!
+        O  Everton só de agito usou as colunas com maiusculas e panz, então tenha cuidado
+     
+ AQUI VEM O PULO DA GATO, vamos por a questao 3 E 4 aqui tbm
+                Coloquei um link para pagina de "deletação"  e edicao
+                Na pagina deletar eu explico 
+           
+Fecha o foreach e o table
+        foreach é tipo uma juncao de while com for, só que mais esperto pq ele ja sabe o tamanho do bagui
+        é usado com arrays e JSON
+        -->
+
+_______________________________________________________________
+
+
